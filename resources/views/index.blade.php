@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ app() -> getLocale()}}">
 <head>
     <meta charset="UTF-8">
     <title>G-Sport</title>
-    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="styles/style-main.css">
+    <!-- Style -->
+    <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet"/>
+    <link href="{{asset('css/style-main.css')}}" rel="stylesheet">
 </head>
 <body>
     <!--<section class="cabecera">
@@ -25,7 +26,7 @@
         </div>
     </div>
 
-<script src="js/bootstrap.js"></script>
-<script src="js/jquery.js"></script>
+<script src="{{asset('js/bootstrap.js')}}"></script>
+<script src="{{asset('js/jquery.js')}}"></script>
 </body>
 </html>

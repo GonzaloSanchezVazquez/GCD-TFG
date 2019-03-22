@@ -17,3 +17,4 @@
 
 Route::get('/','pageController@index');
 Route::get('/inicio','pageController@index');
+Route::get('/main','pageController@main');

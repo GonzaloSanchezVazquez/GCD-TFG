@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>G-Sport | Main page</title>
-    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="styles/style-main.css">
+    <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet"/>
+    <link href="{{asset('css/style-main.css')}}" rel="stylesheet">
 </head>
 <body>
 
@@ -27,8 +27,8 @@
         </div>
     </div>
 
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.js"></script>
+    <script src="{{asset('js/bootstrap.js')}}"></script>
+    <script src="{{asset('js/jquery.js')}}"></script>
     <script>
         $( document ).ready(function() {
             $(".hidden-menu li img").on( "click", function() {
