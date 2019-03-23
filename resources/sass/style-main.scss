@@ -6,19 +6,9 @@ body{
   margin: 0px;
   padding: 0px;
 }
-.index-main-section{
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(to bottom right, #86d7ce , #085078);
-}
-.index-login-section{
-  width: 100%;
-  height: 100vh;
-  background-color: #c8cbcf;
-  display: inline-block;
-  & #emailLogin{
-    width: 85%;
-  }
+.btn-login{
+  color: #86d7ce;
+  border-color: #86d7ce;
 }
 .line-top{
   width: 100%;
@@ -30,5 +20,8 @@ body{
   & .active{
     border: 1px solid #86d7ce;
   }
+}
+.main-video video{
+  width: 100%;
 }
 

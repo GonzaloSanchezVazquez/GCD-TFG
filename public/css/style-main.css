@@ -6,21 +6,9 @@ body {
   margin: 0px;
   padding: 0px; }
 
-.index-main-section {
-  width: 100%;
-  height: 100vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#86d7ce), to(#085078));
-  background-image: -webkit-linear-gradient(top left, #86d7ce, #085078);
-  background-image: -o-linear-gradient(top left, #86d7ce, #085078);
-  background-image: linear-gradient(to bottom right, #86d7ce, #085078); }
-
-.index-login-section {
-  width: 100%;
-  height: 100vh;
-  background-color: #c8cbcf;
-  display: inline-block; }
-  .index-login-section #emailLogin {
-    width: 85%; }
+.btn-login {
+  color: #86d7ce;
+  border-color: #86d7ce; }
 
 .line-top {
   width: 100%;
@@ -31,3 +19,6 @@ body {
   width: 100%; }
   .navbar .active {
     border: 1px solid #86d7ce; }
+
+.main-video video {
+  width: 100%; }
