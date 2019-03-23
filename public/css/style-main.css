@@ -27,48 +27,7 @@ body {
   background-color: #86d7ce;
   height: 10px; }
 
-.main-nav {
-  width: 100%;
-  height: 98.5vh;
-  padding-left: 0px;
-  padding-right: 0px;
-  border-right: 1px solid #86d7ce;
-  left: -17%;
-  -webkit-transition: left 0.5s ease-out;
-  -o-transition: left 0.5s ease-out;
-  transition: left 0.5s ease-out; }
-  .main-nav ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    width: 100%; }
-    .main-nav ul a {
-      text-decoration: none;
-      color: #86d7ce;
-      font-weight: bold; }
-      .main-nav ul a:hover {
-        color: black;
-        font-weight: bold; }
-    .main-nav ul a li {
-      padding-top: 5px;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #86d7ce; }
-      .main-nav ul a li img {
-        padding-left: 8px;
-        margin-right: 8px; }
-
-.view-menu {
-  width: 100%;
-  padding-left: 0px;
-  height: 98.5vh;
-  left: -16.5%;
-  padding-top: 8px;
-  -webkit-transition: left 0.5s ease-out;
-  -o-transition: left 0.5s ease-out;
-  transition: left 0.5s ease-out; }
-  .view-menu ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px; }
-    .view-menu ul li img:hover {
-      cursor: pointer; }
+.navbar {
+  width: 100%; }
+  .navbar .active {
+    border: 1px solid #86d7ce; }
