@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+Route::get('/','pageController@index');
+Route::get('/inicio','pageController@index');
+Route::get('/main','pageController@main');

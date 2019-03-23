@@ -1,0 +1,24 @@
+body {
+  margin: 0px;
+  padding: 0px; }
+
+.row {
+  margin: 0px;
+  padding: 0px; }
+
+.btn-login {
+  color: #86d7ce;
+  border-color: #86d7ce; }
+
+.line-top {
+  width: 100%;
+  background-color: #86d7ce;
+  height: 10px; }
+
+.navbar {
+  width: 100%; }
+  .navbar .active {
+    border: 1px solid #86d7ce; }
+
+.main-video video {
+  width: 100%; }
