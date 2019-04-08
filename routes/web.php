@@ -18,3 +18,49 @@
 Route::get('/','pageController@index');
 Route::get('/inicio','pageController@index');
 Route::get('/main','pageController@main');
+
+
+/*Route::get('/leer', function(){
+
+    $clubes = \App\Club::where('localidad','Ávila')
+        ->get();
+
+    foreach($clubes as $club){
+        echo $club->nombre ."<br>";
+    }
+
+    return $clubes;
+
+});*/
+
+Route::get('/insertar', function(){
+
+    $clubes = new \App\Club();
+
+    $clubes -> nombre = "club 3";
+    $clubes -> email = "club3@gmail.com";
+    $clubes -> password = "club3";
+    $clubes -> localidad = "Murcia";
+    $clubes -> telefono = "987456123";
+    $clubes -> CIF = 'QWE123456';
+
+    $clubes->save();
+
+
+});
+
+Route::get('/actualizar', function(){
+
+    $clubes = \App\Club::find(5);
+
+    $clubes -> nombre = "club 4";
+    $clubes -> email = "club4@gmail.com";
+    $clubes -> password = "club4";
+    $clubes -> localidad = "Murcia";
+    $clubes -> telefono = "987456123";
+    $clubes -> CIF = 'QWE123456';
+
+    $clubes->save();
+
+
+});

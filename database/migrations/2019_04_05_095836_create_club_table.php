@@ -13,7 +13,7 @@ class CreateClubTable extends Migration
      */
     public function up()
     {
-        Schema::create('club', function (Blueprint $table) {
+        Schema::create('clubs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre');
             $table->string('email');
@@ -32,6 +32,6 @@ class CreateClubTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('club');
+        Schema::dropIfExists('clubs');
     }
 }
