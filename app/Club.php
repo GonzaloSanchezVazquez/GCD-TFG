@@ -7,4 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Club extends Model
 {
     //
+
+    protected $fillable = [
+
+        "nombre",
+        "email",
+        "password",
+        "localidad",
+        "telefono",
+        "CIF"
+    ];
 }
