@@ -64,18 +64,3 @@ Route::get('/actualizar', function(){
 
 
 });
-Route::get('/actualizar2', function(){
-
-    $clubes = \App\Club::find(5);
-
-    $clubes -> nombre = "club 4";
-    $clubes -> email = "club4@gmail.com";
-    $clubes -> password = "club4";
-    $clubes -> localidad = "Murcia";
-    $clubes -> telefono = "987456123";
-    $clubes -> CIF = 'QWE123456';
-
-    $clubes->save();
-
-
-});
