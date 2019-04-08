@@ -37,7 +37,7 @@
 
 <div class="main-video">
     <video autoplay="autoplay" muted loop>
-        <source src="{{asset("video/video_extremo.mp4")}}"/>
+        <source src="{{asset("video/video-tennis.mp4")}}"/>
     </video>
 </div>
 
