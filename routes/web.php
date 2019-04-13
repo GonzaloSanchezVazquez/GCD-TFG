@@ -1,5 +1,9 @@
 <?php
 
+use App\Torneo;
+use App\Club;
+use App\Categoria;
+use App\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,11 +22,13 @@
 Route::get('/','pageController@index');
 Route::get('/inicio','pageController@index');
 Route::get('/main','pageController@main');
-Route::resource('/register','userController');
+Route::get('/register','pageController@');
 
-/*Route::get('/leer', function(){
 
-    $clubes = \App\Club::where('localidad','Ávila')
+
+Route::get('/leer', function(){
+
+    $clubes = Club::where('id',1)
         ->get();
 
     foreach($clubes as $club){
@@ -31,7 +37,7 @@ Route::resource('/register','userController');
 
     return $clubes;
 
-});*/
+});
 
 /*Route::get('/insertar', function(){
 
@@ -51,16 +57,83 @@ Route::resource('/register','userController');
 
 Route::get('/actualizar', function(){
 
-    $clubes = \App\Club::find(5);
+    $clubes = Club::find(7);
 
     $clubes -> nombre = "club 4";
     $clubes -> email = "club4@gmail.com";
     $clubes -> password = "club4";
-    $clubes -> localidad = "Murcia";
+    $clubes -> localidad = "Mingorria";
     $clubes -> telefono = "987456123";
     $clubes -> CIF = 'QWE123456';
 
     $clubes->save();
+
+
+});
+/* RELACION 1:N Club->Torneos */
+Route::get('/torneos', function(){
+
+    $torneos = Club::find(1)->torneos->where('localidad','Ávila');
+
+    foreach ($torneos as $torneo) {
+        //
+        echo $torneo->nombre . "<br>";
+    }
+
+
+});
+/* RELACION 1: INVERSA Torneos->Club */
+Route::get('/club', function(){
+
+    $club = Torneo::find(1)->club;
+
+    //
+    echo $club->nombre . "<br>";
+
+
+
+});
+Route::get('/categorias', function(){
+
+    $categorias = Torneo::find(1)->categorias;
+
+    foreach ($categorias as $categoria) {
+        //
+        echo $categoria->id_ref_cat . "<br>";
+    }
+
+
+});
+
+Route::get('/torneo-categoria', function(){
+
+    $torneo = Categoria::find(1)->torneo;
+
+    //
+    echo $torneo->nombre . "<br>";
+
+
+
+});
+/* RELACION N:M EL USUARIO $id SE HA INSCRITO EN LOS TORNEOS... */
+Route::get('/inscripcion/{id}/torneo', function($id){
+
+    $inscripcion = User::find($id);
+
+    foreach ($inscripcion->torneos as $inscrito) {
+        echo $inscrito->nombre . "<br>";
+    }
+
+
+});
+/* RELACION N:M EN EL TORNEO $id SE HAN INSCRITO LOS JUGADORES... */
+Route::get('/inscripcion/{id}/jugador', function($id){
+
+    $inscripcion = Torneo::find($id);
+
+    foreach ($inscripcion->jugadores as $inscrito) {
+        echo $inscrito->nombre ." ". $inscrito->apellido_1." ". $inscrito->apellido_2. "<br>";
+    }
 
 
 });
@@ -80,4 +153,6 @@ Route::get('/insertVarios', function(){
     \App\Club::create(["nombre"=>'Club4',"email"=>'club4@gmail.com',"password"=>'club4',"localidad"=>'Tineo',"telefono"=>"999888777",
         "CIF"=>'ASD123456']);
 
-});*/
+
+});
+
