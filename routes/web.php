@@ -18,7 +18,7 @@
 Route::get('/','pageController@index');
 Route::get('/inicio','pageController@index');
 Route::get('/main','pageController@main');
-
+Route::resource('/register','userController');
 
 /*Route::get('/leer', function(){
 
@@ -33,7 +33,7 @@ Route::get('/main','pageController@main');
 
 });*/
 
-Route::get('/insertar', function(){
+/*Route::get('/insertar', function(){
 
     $clubes = new \App\Club();
 
@@ -67,11 +67,11 @@ Route::get('/actualizar', function(){
 
 Route::get('/borrar', function(){
 
-    /*$club=\App\Club::find(5);
+    //$club=\App\Club::find(5);
 
-    $club->delete();*/
+    //$club->delete();
 
-    \App\Club::where('localidad','Gijon')->delete();
+    //\App\Club::where('localidad','Gijon')->delete();
 
 });
 
@@ -80,4 +80,4 @@ Route::get('/insertVarios', function(){
     \App\Club::create(["nombre"=>'Club4',"email"=>'club4@gmail.com',"password"=>'club4',"localidad"=>'Tineo',"telefono"=>"999888777",
         "CIF"=>'ASD123456']);
 
-});
+});*/

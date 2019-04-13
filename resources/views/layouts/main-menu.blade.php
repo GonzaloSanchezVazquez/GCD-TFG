@@ -11,21 +11,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Deportes de equipo <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Deportes por parejas</a>
+                    <a class="nav-link" href="#">¿Quienes somos?</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Preguntas frecuentes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Deporte individual</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="#">Contacto</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <a class="nav-link" href="{{url('/register')}}">¡Registrate!</a>
+                <input class="form-control mr-sm-2" type="text" placeholder="Usuario" aria-label="usuario">
+                <input class="form-control mr-sm-2" type="password" placeholder="Contraseña" aria-label="usuario">
+                <button class="btn btn-outline-success my-2 my-sm-0 btn-login" type="submit">Login</button>
             </form>
         </div>
     </nav>

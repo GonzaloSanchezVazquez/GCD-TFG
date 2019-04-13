@@ -24,4 +24,18 @@ body{
 .main-video video{
   width: 100%;
 }
+/* REGISTRO */
+
+.formu_register {
+  margin-top: 64px;
+  width: 50%;
+  min-height: 50vh;
+  border: 2px solid #86d7ce;
+  border-radius: 20px;
+  padding-top: 15px;
+  p{
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
 
