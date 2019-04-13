@@ -12,4 +12,6 @@ class Categoria extends Model
     {
         return $this->belongsTo('App\Torneo');
     }
+
+    protected $fillable = ["id_ref_cat","torneo_id"];
 }

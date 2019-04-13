@@ -22,6 +22,7 @@ use App\User;
 Route::get('/','pageController@index');
 Route::get('/inicio','pageController@index');
 Route::get('/main','pageController@main');
+Route::get('/register','pageController@');
 
 
 Route::get('/leer', function(){
