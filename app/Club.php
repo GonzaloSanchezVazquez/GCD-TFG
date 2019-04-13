@@ -8,6 +8,12 @@ class Club extends Model
 {
     //
 
+
+    public function torneos()
+    {
+        return $this->hasMany('App\Torneo');
+    }
+
     protected $fillable = [
 
         "nombre",
@@ -17,4 +23,5 @@ class Club extends Model
         "telefono",
         "CIF"
     ];
+
 }
