@@ -136,3 +136,21 @@ Route::get('/inscripcion/{id}/jugador', function($id){
 
 
 });
+
+Route::get('/borrar', function(){
+
+    /*$club=\App\Club::find(5);
+
+    $club->delete();*/
+
+    \App\Club::where('localidad','Gijon')->delete();
+
+});
+
+Route::get('/insertVarios', function(){
+
+    \App\Club::create(["nombre"=>'Club4',"email"=>'club4@gmail.com',"password"=>'club4',"localidad"=>'Tineo',"telefono"=>"999888777",
+        "CIF"=>'ASD123456']);
+
+});
+
