@@ -25,7 +25,7 @@ class playerController extends Controller
     public function create()
     {
         //
-        $titulo="Registro jugadores | Tenis";
+        $titulo="Registro jugador";
         return view('player\create', compact("titulo"));
     }
 
