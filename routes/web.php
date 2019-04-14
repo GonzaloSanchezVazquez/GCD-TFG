@@ -4,6 +4,8 @@ use App\Torneo;
 use App\Club;
 use App\Categoria;
 use App\User;
+use App\Jugador;
+use App\Player;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +24,7 @@ use App\User;
 Route::get('/','pageController@index');
 Route::get('/inicio','pageController@index');
 Route::get('/main','pageController@main');
-Route::resource('/register','jugadoresController');
+Route::resource('/register','playerController');
 
 
 
@@ -96,7 +98,8 @@ Route::get('/insertClubs', function(){
 });
 /* INTRODUCIR JUGADORES */
 Route::get('/insertJugadores', function() {
-    \App\Club::create();
+    \App\Player::create(["nombre"=>'Gonzalo',"apellido_1"=>'Sánchez',"apellido_2"=>'Vázquez',"email"=>'gonza@gmail.com',"password"=>'Gonza',"telefono"=>'666555444'
+        ,"num_licencia"=>'BA123456',"pais_nacimiento"=>'España',"fecha_nac"=>'1988-12-19',"localidad"=>'Ávila']);
 });
 /* RELACION 1:N Club->Torneos */
 Route::get('/torneos', function(){
