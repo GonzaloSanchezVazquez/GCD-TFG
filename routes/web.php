@@ -24,7 +24,7 @@ use App\Player;
 Route::get('/','pageController@index');
 Route::get('/inicio','pageController@index');
 Route::get('/main','pageController@main');
-Route::resource('player','playerController');
+Route::resource('/player','playerController');
 
 
 

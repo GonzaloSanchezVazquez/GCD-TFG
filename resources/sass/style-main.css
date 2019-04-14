@@ -1,11 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Amaranth");
 body {
   margin: 0px;
   padding: 0px; }
+
+p {
+  font-family: 'Amaranth', sans-serif;
+  font-size: 16px; }
+
+h2 {
+  margin-bottom: 20px; }
 
 .row {
   margin: 0px;
   padding: 0px; }
 
+.margin-bottom_40 {
+  margin-bottom: 40px; }
+
+.margin-top_64 {
+  margin-top: 64px; }
+
+@media (max-width: 576px) {
+  .margin-bottom_40-xs {
+    margin-bottom: 40px; }
+
+  .margin-top_64-xs {
+    margin-top: 64px; } }
 .btn-login {
   color: #86d7ce;
   border-color: #86d7ce; }
@@ -23,16 +43,33 @@ body {
 .main-video video {
   width: 100%; }
 
+/* SECCION player*/
+/* INDEX */
+.submenu-player .col-12 {
+  text-align: center; }
+  .submenu-player .col-12 a {
+    margin-bottom: 500px; }
+    .submenu-player .col-12 a img {
+      max-width: 90%; }
+  @media (min-width: 992px) {
+    .submenu-player .col-12 a img {
+      max-width: 60%; } }
+
 /* REGISTRO */
-.formu_register {
-  margin-top: 64px;
-  width: 50%;
+.section_register {
+  max-width: 90%;
   min-height: 50vh;
   border: 2px solid #86d7ce;
   border-radius: 20px;
-  padding-top: 15px; }
-  .formu_register p {
-    max-width: 80%;
-    margin: 0 auto; }
+  margin: 0 auto;
+  padding: 15px; }
+  .section_register label {
+    min-width: 90%; }
+    .section_register label input {
+      min-width: 90%; }
+  @media (min-width: 992px) {
+    .section_register {
+      max-width: 60%;
+      border: 2px solid #86d7ce; } }
 
 /*# sourceMappingURL=style-main.css.map */

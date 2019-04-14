@@ -15,6 +15,8 @@ class playerController extends Controller
     public function index()
     {
         //
+        $titulo="Bienvenido";
+        return view('player\index', compact("titulo"));
     }
 
     /**
