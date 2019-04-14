@@ -24,11 +24,11 @@ use App\Player;
 Route::get('/','pageController@index');
 Route::get('/inicio','pageController@index');
 Route::get('/main','pageController@main');
-Route::resource('/register','playerController');
+Route::resource('player','playerController');
 
 
 
-Route::get('/leer', function(){
+/*Route::get('/leer', function(){
 
     $clubes = Club::where('id',1)
         ->get();
@@ -41,7 +41,7 @@ Route::get('/leer', function(){
 
 });
 
-/*Route::get('/insertar', function(){
+Route::get('/insertar', function(){
 
     $clubes = new \App\Club();
 
@@ -83,8 +83,8 @@ Route::get('/borrar', function(){
 
 });
 */
-/* INTRODUCIR CLUBS */
-Route::get('/insertClubs', function(){
+// INTRODUCIR CLUBS
+/*Route::get('/insertClubs', function(){
 
     \App\Club::create(["nombre"=>'Casa Social Catolica',"email"=>'casasocial@gmail.com',"password"=>'casasocial',"localidad"=>'Ávila',"telefono"=>"999888777",
         "CIF"=>'ASD123456']);
@@ -96,7 +96,7 @@ Route::get('/insertClubs', function(){
         "CIF"=>'ASD999999']);
 
 });
-/* INTRODUCIR JUGADORES */
+// INTRODUCIR JUGADORES
 Route::get('/insertJugadores', function() {
     \App\Player::create(["nombre"=>'Gonzalo',"apellido_1"=>'Sánchez',"apellido_2"=>'Vázquez',"email"=>'gonza@gmail.com',"password"=>'Gonza',"telefono"=>'666555444'
         ,"num_licencia"=>'BA123456',"pais_nacimiento"=>'España',"fecha_nac"=>'1988-12-19',"localidad"=>'Ávila']);
@@ -107,14 +107,14 @@ Route::get('/insertJugadores', function() {
     \App\Player::create(["nombre"=>'Rafael',"apellido_1"=>'Sánchez',"apellido_2"=>'Encinar',"email"=>'rafa@gmail.com',"password"=>'Rafa',"telefono"=>'666555444'
         ,"num_licencia"=>'BA654987',"pais_nacimiento"=>'España',"fecha_nac"=>'1957-09-18',"localidad"=>'Ávila']);
 });
-/* INTRODUCIR TORNEOS */
+// INTRODUCIR TORNEOS
 Route::get('/insertTorneos', function() {
     \App\Torneo::create(["club_id"=>1,"nombre"=>"Torneo de Verano ciudad de Ávila 2019","fecha_ini"=>"2019-07-14","fecha_fin"=>"2019-07-30",
         "superficie"=>"Pista dura","descripcion"=>"Lorem ipsum","localidad"=>"Ávila"]);
     \App\Torneo::create(["club_id"=>2,"nombre"=>"Torneo Fiestas de la Santa Ávila 2019","fecha_ini"=>"2019-10-14","fecha_fin"=>"2019-10-30",
         "superficie"=>"Pista dura","descripcion"=>"Lorem ipsum","localidad"=>"Ávila"]);
 });
-/* INTRODUCIR CATEGORIAS */
+// INTRODUCIR CATEGORIAS
 Route::get('/insertCategorias', function() {
     \App\Categoria::create(["id_ref_cat"=>"1","torneo_id"=>"1"]);
     \App\Categoria::create(["id_ref_cat"=>"2","torneo_id"=>"1"]);
@@ -122,7 +122,7 @@ Route::get('/insertCategorias', function() {
     \App\Categoria::create(["id_ref_cat"=>"2","torneo_id"=>"2"]);
     \App\Categoria::create(["id_ref_cat"=>"3","torneo_id"=>"2"]);
 });
-
+*/
 
 
 
