@@ -107,6 +107,26 @@ Route::get('/insertJugadores', function() {
     \App\Player::create(["nombre"=>'Rafael',"apellido_1"=>'Sánchez',"apellido_2"=>'Encinar',"email"=>'rafa@gmail.com',"password"=>'Rafa',"telefono"=>'666555444'
         ,"num_licencia"=>'BA654987',"pais_nacimiento"=>'España',"fecha_nac"=>'1957-09-18',"localidad"=>'Ávila']);
 });
+/* INTRODUCIR TORNEOS */
+Route::get('/insertTorneos', function() {
+    \App\Torneo::create(["club_id"=>1,"nombre"=>"Torneo de Verano ciudad de Ávila 2019","fecha_ini"=>"2019-07-14","fecha_fin"=>"2019-07-30",
+        "superficie"=>"Pista dura","descripcion"=>"Lorem ipsum","localidad"=>"Ávila"]);
+    \App\Torneo::create(["club_id"=>2,"nombre"=>"Torneo Fiestas de la Santa Ávila 2019","fecha_ini"=>"2019-10-14","fecha_fin"=>"2019-10-30",
+        "superficie"=>"Pista dura","descripcion"=>"Lorem ipsum","localidad"=>"Ávila"]);
+});
+/* INTRODUCIR CATEGORIAS */
+Route::get('/insertCategorias', function() {
+    \App\Categoria::create(["id_ref_cat"=>"1","torneo_id"=>"1"]);
+    \App\Categoria::create(["id_ref_cat"=>"2","torneo_id"=>"1"]);
+    \App\Categoria::create(["id_ref_cat"=>"1","torneo_id"=>"2"]);
+    \App\Categoria::create(["id_ref_cat"=>"2","torneo_id"=>"2"]);
+    \App\Categoria::create(["id_ref_cat"=>"3","torneo_id"=>"2"]);
+});
+
+
+
+
+
 /* RELACION 1:N Club->Torneos */
 Route::get('/torneos', function(){
 
