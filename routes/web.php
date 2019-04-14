@@ -100,6 +100,12 @@ Route::get('/insertClubs', function(){
 Route::get('/insertJugadores', function() {
     \App\Player::create(["nombre"=>'Gonzalo',"apellido_1"=>'Sánchez',"apellido_2"=>'Vázquez',"email"=>'gonza@gmail.com',"password"=>'Gonza',"telefono"=>'666555444'
         ,"num_licencia"=>'BA123456',"pais_nacimiento"=>'España',"fecha_nac"=>'1988-12-19',"localidad"=>'Ávila']);
+    \App\Player::create(["nombre"=>'Arancha',"apellido_1"=>'Sánchez',"apellido_2"=>'Maroto',"email"=>'arancha@gmail.com',"password"=>'Arancha',"telefono"=>'666555444'
+        ,"num_licencia"=>'BA123578',"pais_nacimiento"=>'España',"fecha_nac"=>'1990-08-24',"localidad"=>'Madrid']);
+    \App\Player::create(["nombre"=>'Isabel',"apellido_1"=>'Vázquez',"apellido_2"=>'Jimenez',"email"=>'isa@gmail.com',"password"=>'Isa',"telefono"=>'666555444'
+        ,"num_licencia"=>'BA789456',"pais_nacimiento"=>'España',"fecha_nac"=>'1957-07-02',"localidad"=>'Ávila']);
+    \App\Player::create(["nombre"=>'Rafael',"apellido_1"=>'Sánchez',"apellido_2"=>'Encinar',"email"=>'rafa@gmail.com',"password"=>'Rafa',"telefono"=>'666555444'
+        ,"num_licencia"=>'BA654987',"pais_nacimiento"=>'España',"fecha_nac"=>'1957-09-18',"localidad"=>'Ávila']);
 });
 /* RELACION 1:N Club->Torneos */
 Route::get('/torneos', function(){
