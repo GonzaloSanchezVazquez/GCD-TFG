@@ -22,7 +22,7 @@ use App\User;
 Route::get('/','pageController@index');
 Route::get('/inicio','pageController@index');
 Route::get('/main','pageController@main');
-Route::get('/register','pageController@');
+Route::resource('/register','jugadoresController');
 
 
 
@@ -80,14 +80,24 @@ Route::get('/borrar', function(){
     //\App\Club::where('localidad','Gijon')->delete();
 
 });
+*/
+/* INTRODUCIR CLUBS */
+Route::get('/insertClubs', function(){
 
-Route::get('/insertVarios', function(){
-
-    \App\Club::create(["nombre"=>'Club4',"email"=>'club4@gmail.com',"password"=>'club4',"localidad"=>'Tineo',"telefono"=>"999888777",
+    \App\Club::create(["nombre"=>'Casa Social Catolica',"email"=>'casasocial@gmail.com',"password"=>'casasocial',"localidad"=>'Ávila',"telefono"=>"999888777",
         "CIF"=>'ASD123456']);
+    \App\Club::create(["nombre"=>'Paramera',"email"=>'paramera@gmail.com',"password"=>'paramera',"localidad"=>'Ávila',"telefono"=>"999888777",
+        "CIF"=>'ASD456789']);
+    \App\Club::create(["nombre"=>'Club3',"email"=>'club3@gmail.com',"password"=>'club3',"localidad"=>'Madrid',"telefono"=>"999888777",
+        "CIF"=>'ASD123789']);
+    \App\Club::create(["nombre"=>'Club4',"email"=>'club4@gmail.com',"password"=>'club4',"localidad"=>'Tineo',"telefono"=>"999888777",
+        "CIF"=>'ASD999999']);
 
-
-});*/
+});
+/* INTRODUCIR JUGADORES */
+Route::get('/insertClubs', function() {
+    \App\Club::create();
+});
 /* RELACION 1:N Club->Torneos */
 Route::get('/torneos', function(){
 
