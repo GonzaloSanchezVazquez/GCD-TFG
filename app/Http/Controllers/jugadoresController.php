@@ -15,7 +15,7 @@ class jugadoresController extends Controller
     {
         //
         $titulo="Registro jugadores | Tenis";
-        return view('Users\register', compact("titulo"));
+        return view('Jugadores\register', compact("titulo"));
     }
 
     /**

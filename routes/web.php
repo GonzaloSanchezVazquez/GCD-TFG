@@ -95,7 +95,7 @@ Route::get('/insertClubs', function(){
 
 });
 /* INTRODUCIR JUGADORES */
-Route::get('/insertClubs', function() {
+Route::get('/insertJugadores', function() {
     \App\Club::create();
 });
 /* RELACION 1:N Club->Torneos */
