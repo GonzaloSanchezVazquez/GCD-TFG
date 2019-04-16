@@ -3,8 +3,6 @@
 use App\Torneo;
 use App\Club;
 use App\Categoria;
-use App\User;
-use App\Jugador;
 use App\Player;
 /*
 |--------------------------------------------------------------------------
@@ -29,16 +27,21 @@ Route::resource('/club','clubController');
 
 
 
-/*Route::get('/leer', function(){
+Route::get('/leer', function(){
 
-    $clubes = Club::where('id',1)
+    $jugadores = Player::where('id',1)
         ->get();
 
-    foreach($clubes as $club){
-        echo $club->nombre ."<br>";
+    foreach($jugadores as $jugador){
+        //echo $jugador->password ."<br>";
+        if (password_verify('Gonza', $jugador->password)) {
+            echo '¡La contraseña es válida!';
+        } else {
+            echo 'La contraseña no es válida.';
+        }
     }
 
-    return $clubes;
+    //return $jugadores;
 
 });
 
@@ -60,16 +63,17 @@ Route::get('/insertar', function(){
 
 Route::get('/actualizar', function(){
 
-    $clubes = Club::find(7);
+    $player = Player::find(1);
 
-    $clubes -> nombre = "club 4";
+    /*$clubes -> nombre = "club 4";
     $clubes -> email = "club4@gmail.com";
     $clubes -> password = "club4";
     $clubes -> localidad = "Mingorria";
     $clubes -> telefono = "987456123";
-    $clubes -> CIF = 'QWE123456';
+    $clubes -> CIF = 'QWE123456';*/
+    $player -> password = password_hash('Gonza',PASSWORD_DEFAULT);
 
-    $clubes->save();
+    $player->save();
 
 
 });
@@ -83,7 +87,8 @@ Route::get('/borrar', function(){
     //\App\Club::where('localidad','Gijon')->delete();
 
 });
-*/
+
+
 // INTRODUCIR CLUBS
 /*Route::get('/insertClubs', function(){
 

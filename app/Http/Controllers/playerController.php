@@ -47,7 +47,7 @@ class playerController extends Controller
         $player->apellido_1=$request->apellido_1_player;
         $player->apellido_2=$request->apellido_2_player;
         $player->email=$request->email_player;
-        $player->password=$request->pass_player;
+        $player->password= password_hash($request->pass_player,PASSWORD_DEFAULT);
         $player->telefono=$request->telefono_player;
         $player->num_licencia=$request->licencia_player;
         $player->pais_nacimiento=$request->pais_player;
