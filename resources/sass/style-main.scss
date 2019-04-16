@@ -60,9 +60,10 @@ h2{
       margin-bottom: 500px;
     }
     @media (min-width: 992px) {
+      padding-top: 64px;
       a{
         img{
-          max-width: 60%;
+          max-height: 800px;
         }
       }
     }

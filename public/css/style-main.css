@@ -52,8 +52,10 @@ h2 {
     .submenu-player .col-12 a img {
       max-width: 90%; }
   @media (min-width: 992px) {
-    .submenu-player .col-12 a img {
-      max-width: 60%; } }
+    .submenu-player .col-12 {
+      padding-top: 64px; }
+      .submenu-player .col-12 a img {
+        max-height: 800px; } }
 
 /* REGISTRO */
 .section_register {

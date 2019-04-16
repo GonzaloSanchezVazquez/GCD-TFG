@@ -25,6 +25,7 @@ Route::get('/','pageController@index');
 Route::get('/inicio','pageController@index');
 Route::get('/main','pageController@main');
 Route::resource('/player','playerController');
+Route::resource('/club','clubController');
 
 
 

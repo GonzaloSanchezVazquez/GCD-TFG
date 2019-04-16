@@ -32,7 +32,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12 col-md-12">
-                            <label>Email:<br><input type="text" name="email_player"></label><br>
+                            <label>Email:<br><input type="email" name="email_player"></label><br>
                             {{csrf_field()}}
                         </div>
                     </div>
@@ -66,6 +66,7 @@
                         <div class="col-12 col-md-12 justify-content-end">
                             <input type="submit" value="Registrarse"><br><br>
                         </div>
+                    </div>
                 </form>
             </div>
         </div>
