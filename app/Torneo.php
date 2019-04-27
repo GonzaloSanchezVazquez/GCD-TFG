@@ -21,4 +21,15 @@ class Torneo extends Model
     {
         return $this->belongsToMany('App\User');
     }
+
+    protected $fillable = [
+
+        "club_id",
+        "nombre",
+        "fecha_ini",
+        "fecha_fin",
+        "superficie",
+        "descripcion",
+        "localidad"
+    ];
 }

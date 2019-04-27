@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Player;
 use Illuminate\Http\Request;
 
-class userController extends Controller
+class playerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class userController extends Controller
     public function index()
     {
         //
-        $titulo="Registro | Tenis";
-        return view('Users\register', compact("titulo"));
+        $titulo="Bienvenido";
+        return view('player\index', compact("titulo"));
     }
 
     /**
@@ -26,6 +27,8 @@ class userController extends Controller
     public function create()
     {
         //
+        $titulo="Registro jugador";
+        return view('player\create', compact("titulo"));
     }
 
     /**
@@ -37,6 +40,21 @@ class userController extends Controller
     public function store(Request $request)
     {
         //
+
+        $player = new Player;
+
+        $player->nombre=$request->nombre_player;
+        $player->apellido_1=$request->apellido_1_player;
+        $player->apellido_2=$request->apellido_2_player;
+        $player->email=$request->email_player;
+        $player->password= password_hash($request->pass_player,PASSWORD_DEFAULT);
+        $player->telefono=$request->telefono_player;
+        $player->num_licencia=$request->licencia_player;
+        $player->pais_nacimiento=$request->pais_player;
+        $player->fecha_nac=$request->fecha_nac_player;
+        $player->localidad=$request->localidad_player;
+
+        $player->save();
     }
 
     /**
